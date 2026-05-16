@@ -73,6 +73,7 @@
     ".step",
     ".testimonial",
     ".content-block",
+    ".content-block__text",
     ".contact-card",
     ".service-detail",
     ".info-box",
