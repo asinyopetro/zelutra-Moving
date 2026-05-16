@@ -505,9 +505,13 @@ h3 { font-size: 1.2rem; }
   gap: 1.5rem;
 }
 
-/* Grille 4 cartes sur une ligne (page À propos) */
+/* Types de services : 2 cartes par ligne, centré (page À propos) */
 .cards-grid-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1.5rem;
 }
 
 .cards-grid-4 > .card {
@@ -974,11 +978,21 @@ h3 { font-size: 1.2rem; }
   margin: 0 auto;
 }
 
-/* 4 valeurs : une ligne, centrée */
+/* Nos valeurs : 4 blocs sur une ligne, centrés */
 .values-grid-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  max-width: 1100px;
+  max-width: 1080px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: stretch;
+}
+
+.section-values .section-header,
+.section-types .section-header {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .values-grid-4 > .value-card {
@@ -1377,12 +1391,12 @@ body.has-sticky-only .footer {
   }
 
   .cards-grid-4 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
   }
 
   .values-grid-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 640px;
+    max-width: 520px;
   }
 
   .grid-3 > :last-child:nth-child(3n + 1):not(:only-child),
@@ -1484,6 +1498,16 @@ body.has-sticky-only .footer {
 @media (min-width: 901px) {
   .services-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .values-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 1080px;
+  }
+
+  .cards-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 820px;
   }
 }
 
