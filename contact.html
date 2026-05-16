@@ -33,14 +33,19 @@
     </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <h1>Contactez-nous</h1>
-      <p>Pas de formulaire — contact direct pour un devis ou une réservation rapide.</p>
+  <section class="contact-hero" aria-label="En-tête contact">
+    <img class="contact-hero__media" src="images/contact-hero.png" alt="" width="1920" height="800" fetchpriority="high" decoding="async" role="presentation">
+    <div class="contact-hero__overlay" aria-hidden="true"></div>
+    <div class="container contact-hero__container">
+      <div class="contact-hero__copy">
+        <p class="contact-hero__eyebrow">Réponse en moins de 10 min</p>
+        <h1>Contactez-nous</h1>
+        <p class="contact-hero__lead">Devis rapide par téléphone, message ou WhatsApp — sans formulaire, sans attente.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section contact-section">
     <div class="container">
       <div class="contact-cards">
         <article class="contact-card">
@@ -87,24 +92,18 @@
         <p style="margin-top: 1rem;"><strong>Réponse rapide garantie</strong> — en général en moins de 10 minutes.</p>
       </div>
 
-      <div class="content-block">
-        <div>
-          <h2 style="color: var(--blue);">Zone desservie</h2>
-          <ul class="zone-list" style="display: block; list-style: none; padding: 0;">
-            <li style="margin-bottom: 0.5rem;">✓ Gatineau, Québec</li>
-            <li style="margin-bottom: 0.5rem;">✓ Ottawa, Ontario</li>
-            <li style="margin-bottom: 0.5rem;">✓ Hull, Aylmer, Buckingham</li>
-            <li style="margin-bottom: 0.5rem;">✓ Kanata, Nepean, Orléans</li>
-          </ul>
+      <div class="content-block contact-zone-block">
+        <div class="zone-map zone-map--contact">
+          <img src="images/zone-gatineau-ottawa.png" alt="Zone Gatineau et Ottawa" width="800" height="500" loading="lazy" decoding="async">
+          <p class="zone-map-caption"><strong>Gatineau · Ottawa · Outaouais</strong></p>
         </div>
         <div class="info-box" style="margin-bottom: 0;">
           <h3>Disponibilité</h3>
-          <p>Nous sommes disponibles quand vous en avez besoin.</p>
-          <div class="availability">
-            <span>7 jours sur 7</span>
-            <span>Matin</span>
-            <span>Soir</span>
-            <span>Week-end</span>
+          <p>7 jours sur 7 — matin, soir et week-end. Détails sur la page <a href="services.html#disponibilite">Services</a>.</p>
+          <div class="options-tags" style="margin-top: 1rem;">
+            <span class="tag">7 jours sur 7</span>
+            <span class="tag">Matin &amp; soir</span>
+            <span class="tag">Week-end</span>
           </div>
         </div>
       </div>
@@ -116,26 +115,38 @@
       <div class="footer-grid">
         <div>
           <a href="index.html" class="logo"><span class="logo-icon">🚚</span> Moving Zelutra</a>
-          <p>Contact rapide — Gatineau & Ottawa.</p>
+          <p>Service de déménagement professionnel à Gatineau et Ottawa. Rapide, fiable et disponible 7 jours sur 7.</p>
         </div>
         <div>
-          <h4>Liens</h4>
+          <h4>Navigation</h4>
           <ul>
             <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#camion">Avec camion</a></li>
+            <li><a href="services.html#main-oeuvre">Sans camion</a></li>
+            <li><a href="services.html#emballage">Emballage</a></li>
+            <li><a href="services.html#montage">Montage</a></li>
           </ul>
         </div>
         <div>
           <h4>Contact</h4>
           <ul>
             <li><a data-phone href="tel:+18199681015">(819) 968-1015</a></li>
-            <li><a data-sms href="sms:+18199681015">Message / iMessage</a></li>
             <li><a data-whatsapp href="https://wa.me/18199681015">WhatsApp</a></li>
+            <li><a data-sms href="sms:+18199681015">Message / iMessage</a></li>
             <li><a data-mail href="mailto:petro@asinyo.org">petro@asinyo.org</a></li>
+            <li>Gatineau · Ottawa</li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom"><p>© 2026 Moving Zelutra.</p></div>
+      <div class="footer-bottom"><p>© 2026 Moving Zelutra — Gatineau & Ottawa. Tous droits réservés.</p></div>
     </div>
   </footer>
 

@@ -1,4 +1,4 @@
-revoir <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -37,8 +37,9 @@ revoir <!DOCTYPE html>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image: url('images/camion.jpg');"></div>
+  <section class="hero hero--banner">
+    <img class="hero__bg" src="images/hero-camion.png" alt="Camion de déménagement devant une maison à Gatineau" width="1920" height="800" fetchpriority="high" decoding="async">
+    <div class="hero__shade" aria-hidden="true"></div>
     <div class="container">
       <span class="hero-badge">Service local · Gatineau & Ottawa</span>
       <h1>Déménagement rapide et fiable à Gatineau & Ottawa</h1>
@@ -70,11 +71,11 @@ revoir <!DOCTYPE html>
     <div class="container">
       <div class="section-header">
         <h2>Nos <span>services</span></h2>
-        <p>Solutions flexibles pour tous vos déménagements, résidentiels ou commerciaux.</p>
+        <p>Aperçu de nos prestations — le détail complet sur la page <a href="services.html">Services</a>.</p>
       </div>
       <div class="cards-grid services-grid">
         <article class="card">
-          <div class="card-img-wrap"><img class="card-img" src="images/chargement-camion-demenagement.jpg" alt="Camion de déménagement devant une maison" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-img-wrap"><img class="card-img" src="images/service-avec-camion.png" alt="Camion de déménagement devant une maison" width="800" height="500" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="card-icon">🚚</div>
             <h3>Avec camion</h3>
@@ -83,7 +84,7 @@ revoir <!DOCTYPE html>
           </div>
         </article>
         <article class="card">
-          <div class="card-img-wrap"><img class="card-img" src="images/sans-camion-demenagement.png" alt="Déménageurs portant des cartons" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-img-wrap"><img class="card-img" src="images/service-sans-camion.png" alt="Déménageurs portant des cartons" width="800" height="500" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="card-icon">👷</div>
             <h3>Sans camion</h3>
@@ -92,7 +93,7 @@ revoir <!DOCTYPE html>
           </div>
         </article>
         <article class="card">
-          <div class="card-img-wrap"><img class="card-img" src="images/residentiel.jpg" alt="Maison et appartement" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-img-wrap"><img class="card-img" src="images/service-residentiel.png" alt="Maison et appartement" width="800" height="500" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="card-icon">🏠</div>
             <h3>Résidentiel</h3>
@@ -101,7 +102,7 @@ revoir <!DOCTYPE html>
           </div>
         </article>
         <article class="card">
-          <div class="card-img-wrap"><img class="card-img" src="images/commercial.jpg" alt="Bureau moderne" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-img-wrap"><img class="card-img" src="images/service-commercial.png" alt="Bureau moderne" width="800" height="500" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="card-icon">🏢</div>
             <h3>Commercial</h3>
@@ -110,21 +111,48 @@ revoir <!DOCTYPE html>
           </div>
         </article>
         <article class="card">
-          <div class="card-img-wrap"><img class="card-img" src="images/boite.png" alt="Cartons et emballage" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-img-wrap"><img class="card-img" src="images/service-emballage.png" alt="Service d'emballage professionnel" width="800" height="500" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="card-icon">📦</div>
-            <h3>Emballage</h3>
-            <p>Boîtes, protection fragile et préparation avant le déménagement.</p>
-            <a href="services.html" class="card-link">En savoir plus →</a>
+            <h3>Service emballage</h3>
+            <p>Boîtes, protection fragile et préparation complète avant le déménagement.</p>
+            <a href="services.html#emballage" class="card-link">En savoir plus →</a>
           </div>
         </article>
         <article class="card">
-          <div class="card-img-wrap"><img class="card-img" src="images/meubles.jpg" alt="Transport de meubles" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-img-wrap"><img class="card-img" src="images/service-transport-meubles.png" alt="Transport de meubles" width="800" height="500" loading="lazy" decoding="async"></div>
           <div class="card-body">
             <div class="card-icon">🪑</div>
             <h3>Transport meubles</h3>
             <p>Sofa, lit, électroménagers — articles lourds ou encombrants.</p>
-            <a href="services.html" class="card-link">En savoir plus →</a>
+            <a href="services.html#transport-meubles" class="card-link">En savoir plus →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrap"><img class="card-img" src="images/service-demontage.png" alt="Démontage de meubles" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="card-icon">🔧</div>
+            <h3>Démontage meubles</h3>
+            <p>Lits, armoires, tables — démontage soigné pour un transport sécuritaire.</p>
+            <a href="services.html#demontage" class="card-link">En savoir plus →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrap"><img class="card-img" src="images/service-montage.png" alt="Montage de meubles" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="card-icon">🛠️</div>
+            <h3>Montage meubles</h3>
+            <p>Installation et remontage de vos meubles dans votre nouveau logement.</p>
+            <a href="services.html#montage" class="card-link">En savoir plus →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img-wrap"><img class="card-img" src="images/service-nettoyage.png" alt="Nettoyage après déménagement" width="800" height="500" loading="lazy" decoding="async"></div>
+          <div class="card-body">
+            <div class="card-icon">✨</div>
+            <h3>Nettoyage après déménagement</h3>
+            <p>Logement propre et prêt à emménager — ancien ou nouveau domicile.</p>
+            <a href="services.html#nettoyage" class="card-link">En savoir plus →</a>
           </div>
         </article>
       </div>
@@ -166,7 +194,7 @@ revoir <!DOCTYPE html>
     <div class="container">
       <div class="section-header">
         <h2>Pourquoi nous <span>choisir</span></h2>
-        <p>L'expérience d'une entreprise locale sérieuse, comme les leaders de la région.</p>
+        <p>Une équipe locale engagée pour un déménagement sans stress.</p>
       </div>
       <div class="features-grid">
         <div class="feature">
@@ -200,8 +228,8 @@ revoir <!DOCTYPE html>
         <div class="feature">
           <span class="feature-icon">📦</span>
           <div>
-            <h3>Aide complète</h3>
-            <p>Emballage, transport, montage et démontage selon vos besoins.</p>
+            <h3>Services à la carte</h3>
+            <p>Emballage, montage ou nettoyage — combinez selon votre projet.</p>
           </div>
         </div>
         <div class="feature">
@@ -232,11 +260,8 @@ revoir <!DOCTYPE html>
         </ul>
       </div>
       <div class="zone-map">
-        <div>
-          <div class="zone-map-placeholder">🗺️</div>
-          <p><strong>Gatineau — Ottawa</strong></p>
-          <p style="color: var(--gray-light); font-size: 0.95rem;">Service local dans toute la région</p>
-        </div>
+        <img src="images/zone-gatineau-ottawa.png" alt="Zone de service Gatineau et Ottawa" width="800" height="500" loading="lazy" decoding="async">
+        <p class="zone-map-caption"><strong>Gatineau — Ottawa</strong> · Service local dans toute la région</p>
       </div>
     </div>
   </section>
