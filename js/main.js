@@ -65,4 +65,47 @@
       { passive: true }
     );
   }
+
+  const revealSelectors = [
+    ".section-header",
+    ".card",
+    ".feature",
+    ".step",
+    ".testimonial",
+    ".content-block",
+    ".contact-card",
+    ".service-detail",
+    ".info-box",
+    ".cta-band",
+    ".zone-wrap > div",
+    ".value-card",
+    ".content-img",
+    ".options-tags",
+  ];
+
+  const revealElements = document.querySelectorAll(revealSelectors.join(","));
+
+  revealElements.forEach((el, index) => {
+    el.classList.add("reveal");
+    const delay = (index % 3) * 0.08;
+    el.style.transitionDelay = delay + "s";
+  });
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+  } else {
+    revealElements.forEach((el) => el.classList.add("is-visible"));
+  }
 })();
