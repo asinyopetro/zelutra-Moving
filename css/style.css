@@ -284,8 +284,7 @@ h3 { font-size: 1.2rem; }
 
 /* Centrer le dernier élément seul (4 cartes seulement — pas la grille services) */
 @media (min-width: 901px) {
-  .cards-grid:not(.services-grid) > :last-child:nth-child(3n + 1):not(:only-child),
-  .values-grid > :last-child:nth-child(3n + 1):not(:only-child),
+  .cards-grid:not(.services-grid):not(.cards-grid-4) > :last-child:nth-child(3n + 1):not(:only-child),
   .grid-3 > :last-child:nth-child(3n + 1):not(:only-child) {
     grid-column: 2;
   }
@@ -504,6 +503,28 @@ h3 { font-size: 1.2rem; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+/* Grille 4 cartes sur une ligne (page À propos) */
+.cards-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cards-grid-4 > .card {
+  grid-column: auto !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cards-grid-4 .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-grid-4 .card-body p {
+  flex: 1;
 }
 
 /* Grille services : toujours 3 colonnes × 2 lignes (6 cartes) */
@@ -949,30 +970,47 @@ h3 { font-size: 1.2rem; }
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
+  margin: 0 auto;
 }
 
-@media (min-width: 901px) {
-  .values-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+/* 4 valeurs : une ligne, centrée */
+.values-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1100px;
+  width: 100%;
+}
 
-  .values-grid > :last-child:nth-child(3n + 1) {
-    grid-column: auto;
-  }
+.values-grid-4 > .value-card {
+  grid-column: auto !important;
+  height: 100%;
+  min-height: 100%;
 }
 
 .value-card {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   background: var(--white);
   border-radius: var(--radius);
   border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition:
     transform 0.35s ease,
     border-color 0.35s ease,
     box-shadow 0.35s ease;
+}
+
+.value-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.value-card p {
+  font-size: 0.92rem;
+  color: var(--gray-light);
+  margin: 0;
 }
 
 .value-card:hover {
@@ -1338,14 +1376,19 @@ body.has-sticky-only .footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .cards-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .values-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 640px;
+  }
+
   .grid-3 > :last-child:nth-child(3n + 1):not(:only-child),
   .cards-grid > :last-child:nth-child(3n + 1):not(:only-child),
   .contact-cards > :last-child:nth-child(3n + 1):not(:only-child) {
     grid-column: auto;
-  }
-
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-3 > :last-child:nth-child(3n + 2):not(:only-child) {
@@ -1426,6 +1469,15 @@ body.has-sticky-only .footer {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cards-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid-4 {
+    grid-template-columns: 1fr;
+    max-width: 360px;
   }
 }
 
